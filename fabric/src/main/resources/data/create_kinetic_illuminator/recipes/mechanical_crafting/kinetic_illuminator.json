@@ -1,0 +1,35 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "S": {
+      "item": "minecraft:spyglass"
+    },
+    "G": {
+      "tag": "c:gold_plates"
+    },
+    "E": {
+      "item": "create:electron_tube"
+    },
+    "I": {
+      "item": "minecraft:glow_ink_sac"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "B": {
+      "item": "minecraft:beacon"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    " S   ",
+    "GPIEB",
+    "GOG  "
+  ],
+  "result": {
+    "item": "create_kinetic_illuminator:kinetic_illuminator"
+  }
+}

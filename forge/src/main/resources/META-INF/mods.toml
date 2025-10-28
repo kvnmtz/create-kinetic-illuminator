@@ -1,0 +1,42 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/kvnmtz/create-kinetic-illuminator/issues"
+license = "ARR"
+
+[[mods]]
+modId = "create_kinetic_illuminator"
+version = "${version}"
+displayName = "Create: Kinetic Illuminator"
+authors = "3xpl01t"
+description = '''
+Adds a new curiosity to Create: the Kinetic Illuminator can create and destroy invisible light blocks.
+'''
+logoFile = "icon.png"
+
+[[dependencies.create_kinetic_illuminator]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.create_kinetic_illuminator]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[${minecraft_version}]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.create_kinetic_illuminator]]
+modId = "architectury"
+mandatory = true
+versionRange = "[${architectury_api_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.create_kinetic_illuminator]]
+modId = "create"
+mandatory = true
+versionRange = "[${create_version_short},)"
+ordering = "AFTER"
+side = "BOTH"

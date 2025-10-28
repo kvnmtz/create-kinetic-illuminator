@@ -1,0 +1,4 @@
+{
+  "item.create_kinetic_illuminator.kinetic_illuminator": "Kinetic Illuminator",
+  "item.create_kinetic_illuminator.kinetic_illuminator.tooltip.summary": "Can freeze photons in place. Using _Glowstone Dust_ from your inventory, you can _place invisible light blocks_ in the world. Right-clicking existing light blocks will _destroy_ them again. You can scroll while crouching to _adjust the light level_ of the blocks to be placed."
+}

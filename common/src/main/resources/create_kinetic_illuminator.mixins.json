@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "dev.kvnmtz.createkineticilluminator.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+    "LightBlockMixin",
+    "ClientLevelMixin"
+  ],
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

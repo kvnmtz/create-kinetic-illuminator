@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "create_kinetic_illuminator",
+  "version": "$version",
+  "name": "Create: Kinetic Illuminator",
+  "description": "Adds a new curiosity to Create: the Kinetic Illuminator can create and destroy invisible light blocks.",
+  "authors": [
+    "3xpl01t"
+  ],
+  "contact": {
+    "sources": "https://github.com/kvnmtz/create-kinetic-illuminator",
+    "issues": "https://github.com/kvnmtz/create-kinetic-illuminator/issues"
+  },
+  "license": "ARR",
+  "icon": "assets/create_kinetic_illuminator/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.kvnmtz.createkineticilluminator.fabric.CreateKineticIlluminatorFabric"
+    ]
+  },
+  "mixins": [
+    "create_kinetic_illuminator.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "minecraft": "~$minecraft_version",
+    "java": ">=17",
+    "architectury": ">=$architectury_api_version",
+    "fabric-api": "*",
+    "create": ">=$create_version_short"
+  }
+}
