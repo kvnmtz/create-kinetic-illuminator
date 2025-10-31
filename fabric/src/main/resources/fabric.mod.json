@@ -24,10 +24,20 @@
   ],
   "depends": {
     "fabricloader": ">=0.17.3",
-    "minecraft": "~$minecraft_version",
+    "minecraft": "=$minecraft_version",
     "java": ">=17",
     "architectury": ">=$architectury_api_version",
     "fabric-api": "*",
     "create": ">=$create_version_short"
+  },
+  "custom": {
+    "mc-publish": {
+      "dependencies": [
+        "architectury#(ignore)",
+        "architectury-api@>=$architectury_api_version(required)",
+        "create#(ignore)",
+        "create-fabric@>=$create_version_short(required)"
+      ]
+    }
   }
 }
