@@ -46,17 +46,6 @@ module.exports = {
     './update-version.js',
     // --------------------
     [
-      '@semantic-release/git',
-      {
-        assets: [
-          'gradle.properties',
-          'CHANGELOG.md',
-        ],
-        message: 'chore(release): ${nextRelease.version} [skip ci]',
-      },
-    ],
-    // --------------------
-    [
       '@semantic-release/exec',
       {
         prepareCmd: './gradlew build --build-cache',
@@ -69,6 +58,16 @@ module.exports = {
         assets: [
           '{fabric,forge}/build/libs/!(*-@(dev-shadow|sources)).jar',
         ],
+      },
+    ],
+    // --------------------
+    [
+      '@semantic-release/git',
+      {
+        assets: [
+          'gradle.properties'
+        ],
+        message: 'chore(release): ${nextRelease.version} [skip ci]',
       },
     ],
     // --------------------
