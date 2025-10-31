@@ -16,7 +16,14 @@ import org.apache.commons.lang3.NotImplementedException;
 
 public class KineticIlluminatorItemRenderer extends CustomRenderedItemModelRenderer {
 
-    public static final KineticIlluminatorItemRenderer INSTANCE = new KineticIlluminatorItemRenderer();
+    private KineticIlluminatorItemRenderer() {
+    }
+
+    private static final KineticIlluminatorItemRenderer INSTANCE = new KineticIlluminatorItemRenderer();
+
+    public static KineticIlluminatorItemRenderer getInstance() {
+        return INSTANCE;
+    }
 
     public static final PartialModel CORE = PartialModel.of(CreateKineticIlluminator.asResource("item" +
             "/kinetic_illuminator/core"));

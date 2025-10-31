@@ -5,6 +5,8 @@ import dev.kvnmtz.createkineticilluminator.client.renderer.KineticIlluminatorIte
 import dev.kvnmtz.createkineticilluminator.item.KineticIlluminatorItem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 
 import java.util.function.Consumer;
@@ -15,9 +17,10 @@ public class KineticIlluminatorItemForge extends KineticIlluminatorItem {
         super(properties);
     }
 
+    @OnlyIn(Dist.CLIENT)
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-        consumer.accept(SimpleCustomRenderer.create(this, KineticIlluminatorItemRenderer.INSTANCE));
+        consumer.accept(SimpleCustomRenderer.create(this, KineticIlluminatorItemRenderer.getInstance()));
     }
 
     @Override

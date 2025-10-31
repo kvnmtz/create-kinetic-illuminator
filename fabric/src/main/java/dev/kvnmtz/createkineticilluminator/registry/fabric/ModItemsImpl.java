@@ -18,7 +18,7 @@ public class ModItemsImpl {
                 .item("kinetic_illuminator", KineticIlluminatorItemFabric::create)
                 .tab(AllCreativeModeTabs.BASE_CREATIVE_TAB.key())
                 .properties(p -> p.stacksTo(1).fireResistant().rarity(Rarity.UNCOMMON))
-                .transform(CreateRegistrate.customRenderedItem(() -> () -> KineticIlluminatorItemRenderer.INSTANCE))
+                .transform(CreateRegistrate.customRenderedItem(() -> KineticIlluminatorItemRenderer::getInstance))
                 .lang("Kinetic Illuminator")
                 .model(AssetLookup.itemModelWithPartials())
                 .register();

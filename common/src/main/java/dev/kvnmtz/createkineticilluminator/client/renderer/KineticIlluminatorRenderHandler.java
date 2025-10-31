@@ -4,7 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.content.equipment.zapper.ShootableGadgetRenderHandler;
-import dev.kvnmtz.createkineticilluminator.network.KineticIlluminatorShootPacket;
+import dev.kvnmtz.createkineticilluminator.network.KineticIlluminatorBeamPacket;
 import dev.kvnmtz.createkineticilluminator.registry.ModItems;
 import net.createmod.catnip.animation.AnimationTickHolder;
 import net.createmod.catnip.outliner.Outliner;
@@ -44,7 +44,7 @@ public class KineticIlluminatorRenderHandler extends ShootableGadgetRenderHandle
         // manually after calling shoot
     }
 
-    public void playSound(Vec3 position, KineticIlluminatorShootPacket.ShootType shootType) {
+    public void playSound(Vec3 position, KineticIlluminatorBeamPacket.ShootType shootType) {
         var client = Minecraft.getInstance();
         if (client.level == null) {
             return;
@@ -54,7 +54,7 @@ public class KineticIlluminatorRenderHandler extends ShootableGadgetRenderHandle
 
         AllSoundEvents.WORLDSHAPER_PLACE.play(client.level, client.player, soundPos, 0.1F, 0.1F);
 
-        if (shootType == KineticIlluminatorShootPacket.ShootType.PLACE_BLOCK) {
+        if (shootType == KineticIlluminatorBeamPacket.ShootType.PLACE_BLOCK) {
             client.level.playSound(client.player, soundPos, SoundEvents.BEACON_ACTIVATE,
                     SoundSource.PLAYERS, 0.3f, 1.5f);
         } else {
@@ -149,7 +149,7 @@ public class KineticIlluminatorRenderHandler extends ShootableGadgetRenderHandle
 
         var random = new Random();
 
-        if (beam.shootType == KineticIlluminatorShootPacket.ShootType.PLACE_BLOCK) {
+        if (beam.shootType == KineticIlluminatorBeamPacket.ShootType.PLACE_BLOCK) {
             var centerX = beam.endPos.x;
             var centerY = beam.endPos.y;
             var centerZ = beam.endPos.z;
@@ -194,9 +194,9 @@ public class KineticIlluminatorRenderHandler extends ShootableGadgetRenderHandle
         public float thickness;
         public final Vec3 startPos;
         public final Vec3 endPos;
-        public final KineticIlluminatorShootPacket.ShootType shootType;
+        public final KineticIlluminatorBeamPacket.ShootType shootType;
 
-        public PhotonBeam(Vec3 startPos, Vec3 endPos, KineticIlluminatorShootPacket.ShootType shootType) {
+        public PhotonBeam(Vec3 startPos, Vec3 endPos, KineticIlluminatorBeamPacket.ShootType shootType) {
             this.thickness = 1.0f;
             this.startPos = startPos;
             this.endPos = endPos;
